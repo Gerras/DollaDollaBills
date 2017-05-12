@@ -1,0 +1,62 @@
+﻿@using DollaDollaBills.Models
+@model TotalBillsModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>BILLS!!!!</h1>
+    <p class="lead">Track Yo Bills Sucka!!!</p>
+</div>
+<div>
+    @Html.Partial("AddReceipt", new Receipt())
+</div>
+@if (Model.Receipts.Count > 0)
+{
+    <div class="row">
+        <div class="col-md-4">
+            <h4>Receipts</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Location</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                @foreach (var receipt in Model.Receipts)
+                {
+                        <tr>
+                            <td>
+                                @receipt.User
+                            </td>
+                            <td>
+                                @receipt.Location
+                            </td>
+                            <td>
+                                @receipt.Desription
+                            </td>
+                            <td>
+                                $@receipt.Amount
+                            </td>
+                        </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}
+
+<div class="row">
+    <div class="col-md-4">
+        @Html.LabelFor(m => m.Total)
+        $@Html.DisplayTextFor(m => m.Total)
+    </div>
+</div>
