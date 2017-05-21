@@ -23,6 +23,7 @@ namespace DollaDollaBills.DAL
 
         public virtual DbSet<Receipt> Receipts { get; set; }
         public virtual DbSet<TotalBillsModel> TotalBills { get; set; }
+        public virtual DbSet<SpendingModel> Spendings { get; set; }
         // public virtual DbSet<MyEntity> MyEntities { get; set; }
     }
 

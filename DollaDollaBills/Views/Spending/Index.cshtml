@@ -1,0 +1,32 @@
+﻿@model DollaDollaBills.Models.SpendingModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Spending Yo Shit</h2>
+
+<div class="col-md-12">
+    @if(Model != null)
+    {
+        <div class="row">
+            <div class="col-md-6">
+                <p>Monthly Income</p>
+            </div>
+            <div class="col-md-6">
+                <p>@Model.MonthlyIncome</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <p>What you've designated as your monthly spending</p>
+            </div>
+            <div class="col-md-6">
+                <p>@Model.MonthlySpendingLimit</p>
+            </div>
+        </div>
+    }
+    <div class="row">
+        @Html.ActionLink("Create Spending Model", "CreateSpendingModel")
+    </div>
+</div>
+

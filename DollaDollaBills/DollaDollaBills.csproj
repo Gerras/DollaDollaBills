@@ -150,6 +150,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SpendingController.cs" />
     <Compile Include="DAL\DollaDollaContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -158,8 +159,17 @@
     <Compile Include="Migrations\201705062207372_Initial-Migration.Designer.cs">
       <DependentUpon>201705062207372_Initial-Migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705210027551_CreateSpendingModel.cs" />
+    <Compile Include="Migrations\201705210027551_CreateSpendingModel.Designer.cs">
+      <DependentUpon>201705210027551_CreateSpendingModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705210054089_CreateSpendingModelV2.cs" />
+    <Compile Include="Migrations\201705210054089_CreateSpendingModelV2.Designer.cs">
+      <DependentUpon>201705210054089_CreateSpendingModelV2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Receipt.cs" />
+    <Compile Include="Models\SpendingModel.cs" />
     <Compile Include="Models\TotalBillsModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -213,6 +223,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\AddReceipt.cshtml" />
+    <Content Include="Views\Spending\CreateSpendingModel.cshtml" />
+    <Content Include="Views\Spending\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -223,6 +235,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201705062207372_Initial-Migration.resx">
       <DependentUpon>201705062207372_Initial-Migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705210027551_CreateSpendingModel.resx">
+      <DependentUpon>201705210027551_CreateSpendingModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705210054089_CreateSpendingModelV2.resx">
+      <DependentUpon>201705210054089_CreateSpendingModelV2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

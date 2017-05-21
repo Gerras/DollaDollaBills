@@ -27,6 +27,7 @@
                         <th>Location</th>
                         <th>Description</th>
                         <th>Amount</th>
+                        <th>Date Added</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -45,6 +46,12 @@
                             </td>
                             <td>
                                 $@receipt.Amount
+                            </td>
+                            <td>
+                                @receipt.DateAdded
+                            </td>
+                            <td>
+                                @Html.ActionLink("Delete", "DeleteReceipt", new { ReceiptId = receipt.Id}, new { @class = "btn btn-success" })
                             </td>
                         </tr>
                 }
